@@ -4,20 +4,30 @@
   <title>Alwyn's Portfolio</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <!-- Not currently functional but saving this code for when I can get it
+    hosted elsewhere.  Running locally, I'm getting cross-origin request
+    errors.  But I want to pull out the reused code...
+  <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#headerbar').load("header.html"); /* Load header into #headerbar div */
+    });
+  </script> -->
+
 </head>
 
-<body id="homepage">
+<body>
 
-  <header>
+  <header id="headerbar">
     <div id="headerwrapper">
       <div id="logo">
         Alwyn Durham
       </div>
 
       <nav>
-        <a href="bio.html" target="content-pane">About</a> |
-        <a href="portfolio.html" target="content-pane">Portfolio</a> |
-        <a href="contact.html" target="content-pane">Contact</a>
+        <a href="index.html">About</a> |
+        <a href="portfolio.html">Portfolio</a> |
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -33,9 +43,9 @@
     <section id="social-media">
       <h2 class="social-media">Connect with Me</h2>
       <hr class="social-media">
-      <img class="sm-icon" src="assets/images/stackoverflow.png" alt="Stack Overflow">
-      <img class="sm-icon" src="assets/images/linkedin_square_color-128.png" alt="Linkedin">
-      <img class="sm-icon" src="assets/images/github_square-128.png" alt="Github">
+      <a href="https://stackoverflow.com/users/3010362/armandfrvr" target="_blank"><img class="sm-icon" src="assets/images/stackoverflow.png" alt="Stack Overflow"></a>
+      <a href="https://www.linkedin.com/in/alwyn-durham-3883a833" target="_blank"><img class="sm-icon" src="assets/images/linkedin_square_color-128.png" alt="Linkedin"></a>
+      <a href="https://github.com/ArmandFrvr" target="_blank"><img class="sm-icon" src="assets/images/github_square-128.png" alt="Github"></a>
     </section>
 
   </div>

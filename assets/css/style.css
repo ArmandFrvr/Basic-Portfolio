@@ -100,14 +100,11 @@ nav {
 
 
 
-#homepage {
-  background-image: url("../images/cork-wallet.png");
-  background-repeat: repeat;
-}
-
 body {
   color: #727272; /* #777777 doesn't meet WCAG 2.0 contrast requirements */
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-image: url("../images/cork-wallet.png");
+  background-repeat: repeat;
 }
 
 footer {
@@ -195,4 +192,62 @@ hr.social-media {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
+}
+
+/* Form styles */
+
+form {
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .4em;
+  margin-bottom: 1em;
+  margin-top: .3em;
+}
+
+input[type=submit] {
+  margin-bottom: 1em;
+}
+
+.required:before {
+  position: absolute;
+  margin-left: -10px;
+  content: "* ";
+  color: #C00000;
+}
+
+/* Placeholder styling snipped from https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research */
+-webkit-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #767676;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19 */
+  color: #767676;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+
+.sub-text {
+  font-size: .8em;
+}
+
+
+
+/* Footer styling */
+
+
+.footer-text {
+  color: #FFFFFF;
 }
