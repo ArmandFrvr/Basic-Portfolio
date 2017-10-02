@@ -4,29 +4,12 @@
 
 
 
-
-@media (max-width: 799px) {
-  .bio-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: .6em;
-  }
-}
-
-@media (min-width: 800px) {
-  .bio-img {
-    float:left;
-    max-width: 50%;
-    height: auto;
-    margin-right: 15px;
-  }
-}
-@media (min-width: 1200px) {
-  .bio-img {
-
-    max-width: 300px;
-
-  }
+/* -------- General styles -------- */
+body {
+  color: #727272; /* #777777 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-image: url("../images/cork-wallet.png");
+  background-repeat: repeat;
 }
 
 h1 {
@@ -43,22 +26,19 @@ h2 {
   font-size: 1.3em;
 }
 
-h2.social-media {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 hr {
   color: #cccccc;
   margin-bottom: 15px;
 }
 
-/* No padding between header and first paragraph */
-/*
-h1 ~ p:first-of-type {
-  margin-top: 0px;
+.sub-text {
+  font-size: .8em;
 }
-*/
+/* -------------------------------- */
+
+
+
+/* ------------ Header ------------ */
 header {
   background-color: #FFFFFF !important;
   border-bottom: 2px solid #cccccc;
@@ -70,7 +50,13 @@ nav {
   padding:20px;
   margin-right: 15px;
   margin-left: 15px;
+}
 
+nav a:hover, nav a:focus {
+  /* color: #367C79; */
+  /*font-weight: bold;*/
+  background-color: #367C79;
+  color: white;
 }
 
 #logo {
@@ -81,7 +67,6 @@ nav {
   padding:20px;
   margin-right: 15px;
   margin-left: 15px;
-
 }
 
 @media (min-width: 525px) {
@@ -97,32 +82,11 @@ nav {
     justify-content: center;
   }
 }
+/* -------------------------------- */
 
 
 
-body {
-  color: #727272; /* #777777 doesn't meet WCAG 2.0 contrast requirements */
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  background-image: url("../images/cork-wallet.png");
-  background-repeat: repeat;
-}
-
-footer {
-  background-color: #666666;
-  color: #FDFDFD;
-}
-
-#main-content {
-  background-color: #FFFFFF;
-  border: 1px solid #dddddd;
-  flex: 1 1 70%;
-  padding: 20px;
-  padding-top: 0;
-  margin-bottom: 50px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
+/* ------- Social media box ------- */
 #social-media {
   background-color: #FFFFFF;
   border: 1px solid #dddddd;
@@ -139,6 +103,11 @@ footer {
   margin-left: 15px;
 }
 
+h2.social-media {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 hr.social-media {
   max-width: 94%;
 }
@@ -150,6 +119,25 @@ hr.social-media {
   height: auto;
 }
 
+.sm-icon:hover {
+  width: 35%;
+  margin: -2%;
+}
+/* -------------------------------- */
+
+
+
+/* ---- Main area and flexbox ----- */
+#main-content {
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  flex: 1 1 70%;
+  padding: 20px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
 
 #wrapper, #headerwrapper { /* Use the same margins for the header and body content so they align */
   margin: 0 auto;
@@ -183,19 +171,39 @@ hr.social-media {
     flex-wrap: wrap;
   }
 }
+/* -------------------------------- */
 
-#content-pane {
-  border: 1px solid #dddddd;
-  width: 100%;
-  height: 600px;
-  background-color: #FFFFFF;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
+
+
+/* ----------- Biography ---------- */
+@media (max-width: 799px) {
+  .bio-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .6em;
+  }
 }
 
-/* Form styles */
+@media (min-width: 800px) {
+  .bio-img {
+    float:left;
+    max-width: 50%;
+    height: auto;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .bio-img {
 
+    max-width: 300px;
+
+  }
+}
+/* -------------------------------- */
+
+
+
+/* --------- Form styles ---------- */
 form {
   width: 100%;
 }
@@ -214,6 +222,11 @@ input[type=submit] {
   margin-bottom: 1em;
 }
 
+input[type=submit]:hover, input[type=submit]:focus {
+  color: white;
+  background-color: #367C79;
+}
+
 .required:before {
   position: absolute;
   margin-left: -10px;
@@ -221,7 +234,7 @@ input[type=submit] {
   color: #C00000;
 }
 
-/* Placeholder styling snipped from https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research */
+/* Placeholder text styling snipped from https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research */
 -webkit-input-placeholder {
   color: #767676;
   opacity: 1;
@@ -238,10 +251,9 @@ input[type=submit] {
   color: #767676;
   opacity: 1;
 }
+/* -------------------------------- */
 
-.sub-text {
-  font-size: .8em;
-}
+
 
 /* Portfolio styles */
 
@@ -301,7 +313,34 @@ input[type=submit] {
 
 /* Footer styling */
 
-
-.footer-text {
-  color: #FFFFFF;
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #666666;
+  color: #FDFDFD;
+  border-top: 10px solid #367C79;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
 }
+
+
+/* Sticky footer - https://css-tricks.com/snippets/css/sticky-footer */
+html, body {
+  height: 100%;
+}
+
+#page-wrapper {
+  min-height: 100%;
+  margin-bottom: -70px;
+}
+
+#page-wrapper:after {
+  content: "";
+  display: block;
+  height: 70px;
+}
+
